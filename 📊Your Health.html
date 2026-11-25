@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+*{font-family: Arial, Cabin, sans-serif}
+
+body {
+margin: 0;
+padding: 0;
+color: #36454F;
+background-color: #D8E6E7;
+}
+
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #2A7C7B;
+padding: 0 10px;
+position: sticky;
+top: 0;
+}
+
+.navbar-logo {
+display: flex;
+align-items: center;
+}
+
+.navbar-logo img {
+height: 40px;
+width: auto;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+display: flex;
+align-items: center;
+}
+
+ul li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul li {
+color: white;
+text-align: center;
+}
+
+.action-btn {
+background-color: #4EA1A1; 
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 3px;
+font-weight: bold;
+}
+
+.card-container {
+display: flex;
+gap: 15px;
+}
+
+.card {
+background-color: white;
+padding: 10px;
+width: 40%;
+margin-left: 15px;
+margin-right: 15px;
+flex: 1;
+}
+
+.card2 {
+background-color: white;
+padding: 10px;
+width: auto;
+margin-left: 15px;
+margin-right: 15px;
+flex: 1;
+}
+
+
+input[type="text"] {
+color: #36454F;
+padding: 12px 16px;
+width: 300px;
+font-size: 16px;
+border-radius: 5px;
+border-color: #cccccc;
+height: 18px;
+}
+
+input:focus {
+border-color: #4EA1A1;
+outline: none;
+border-radius: 5px;
+}
+
+input[type="date"] {
+color: #36454F;
+padding: 12px 16px;
+width: 300px;
+font-size: 16px;
+border: 1px solid #cccccc;
+border-radius: 5px;
+background-color: white;
+height: 18px;
+}
+
+input[type="date"]:focus {
+border-color: #4EA1A1;
+outline: none;
+}
+
+label {
+display: flex;
+gap: 12px;
+color: #36454F;
+padding: 12px 16px;
+font-size: 16px;
+border: 1px solid #cccccc;
+border-radius: 5px;
+background-color: white;
+}
+
+label:has(input:checked) {
+color: #2A7C7C;
+font-weight: bold;
+}
+
+.css-carousel {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+width: 100%;
+border-radius: 7px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.css-carousel img {
+width: 100%;
+flex-shrink: 0;
+scroll-snap-align: start;
+object-fit: cover;
+}
+
+.feedback {
+display: none;
+}
+
+.card2:has(input[value="low"]:checked) .feedback.low,
+.card2:has(input[value="moderate"]:checked) .feedback.moderate,
+.card2:has(input[value="high"]:checked) .feedback.high,
+.card2:has(input[value="very-high"]:checked) .feedback.very-high {
+display: block;
+}
+
+.bar {
+height: 8px;
+width: 0px;
+background: #2A7C7C;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.card2:has(input[value="low"]:checked) .bar {
+width: 25%;
+background: #2A7C7C;
+}
+
+.card2:has(input[value="moderate"]:checked) .bar {
+width: 50%;
+background: yellow;
+}
+
+.card2:has(input[value="high"]:checked) .bar {
+width: 75%;
+background: orange;
+}
+
+.card2:has(input[value="very-high"]:checked) .bar {
+width: 100%;
+background: red;
+}
+
+</style>
+
+<nav class="navbar">
+<div class="navbar-logo">
+<img src="logo.jpeg" alt="logo">
+</div>
+<ul>
+<li><a href="http://localhost:9898/Local/index.html?7D48068C-2756-4F5C-A124-214E278077C6">Home</a></li>
+<li><a href="http://localhost:9898/Local/%F0%9F%93%89About%20Us.html?68B4BF90-7D71-4033-9F11-59D4ED38E28F">About</a></li>
+<li><a class="action-btn" href="#action">Take Action</a></li>
+</ul>
+</nav>
+
+<p></p>
+
+<div class="card-container">
+<div class="card">
+<h3>Logging<h3>
+<input class="input1" type="text" placeholder="Log here...">
+<p></p>
+<input class="input2" type="date" placeholder="Select date...">
+</div>
+<div class="card">
+<img src="action img1.jpeg" width=100% height=auto>
+</div>
+</div>
+
+<p></p>
+<div class="card2">
+<h3>How long do you spend on screens daily?</h3>
+<label>
+<input type="radio" value="low" name="1">Less than an hour</input>
+</label>
+<p></p>
+<label>
+<input type="radio" value="moderate" name="1">One to two hours</input>
+</label>
+<p></p>
+<label>
+<input type="radio" value="high" name="1">Three to four hours</input>
+</label>
+<p></p]>
+<label>
+<input type="radio" value="very-high" name="1">More than four hours</input>
+</label>
+<p></p>
+
+<div class="feedback low">Wow! That's great. Keep your screen time low and get around 7 or 9 hours of sleep for good health.</div>
+<div class="feedback moderate">Good habit! Make sure you don't use your device half an hour before bed, so that you sleep well.</div>
+<div class="feedback high">Try to cut back by an hour. Too much blue light can affect sleep.</div>
+<div class="feedback very-high">That's a lot! Cut back by 1-2 hours, don't use your screens unless you need to, and make sure to turn them off an hour before bed.</div>
+<p></p>
+
+<div class="bar"></div>
+</div>
+
+
+
+<p></p>
+<div class="card2">
+<div class="css-carousel">
+  <img src="img4.jpeg" alt="Slide 1">
+  <img src="img5.jpeg" alt="Slide 2">
+  <img src="img6.jpeg" alt="Slide 3">
+</div>
+</div>
+<p></p>
+
+<footer class="navbar">
+<div class="navbar-logo">
+<img src="logo.jpeg" alt="logo">
+</div>
+<ul>
+<li><a href="http://localhost:9898/Local/index.html?7D48068C-2756-4F5C-A124-214E278077C6">Home</a></li>
+<li>Contact us +91 92315 63490.</li>
+</ul>
+</footer>
+
+</html>
